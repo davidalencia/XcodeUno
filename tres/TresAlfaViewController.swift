@@ -10,6 +10,11 @@ import UIKit
 
 class TresAlfaViewController: UIViewController {
     
+    var nombre : String = ""
+    var counterP = 0
+    var counterM = 0
+    let emojis = ["","👊🏾","🖐🏽","✌🏻","🦎","🖖"]
+    
     @IBOutlet weak var manitas: UIButton!
     
     @IBOutlet weak var scoreM: UILabel!
@@ -18,7 +23,9 @@ class TresAlfaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        scoreM.text = "score Maquina: \(counterM)"
+        scoreP.text = "score \(nombre): \(counterP)"
         // Do any additional setup after loading the view.
     }
 
@@ -29,7 +36,11 @@ class TresAlfaViewController: UIViewController {
     
     
 
-    @IBAction func puño(_ sender: Any) {
+    @IBAction func puño(_ sender: UIButton) {
+        let movJugador = sender.tag
+        let movM = Int(arc4random_uniform(5)+1)
+        var mensaje = ""
+        
     }
    
 
